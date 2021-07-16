@@ -19,7 +19,7 @@ cargo build
 New-Item -Type SymbolicLink ../../libclipboard.dll -Value ./target/debug/libclipboard.dll
 
 # on macOS/Linux
-bash ./copy_lib.sh
+bash ./make_symlink.sh
 ```
 
 ### Case B: Use the existing build files
