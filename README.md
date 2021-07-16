@@ -18,11 +18,8 @@ cargo build
 # on Windows
 cp ./target/debug/libclipboard.dll ../../
 
-# on macOS
-cp ./target/debug/libclipboard.dylib ../../
-
-# on Linux
-cp ./target/debug/libclipboard.so ../../
+# on macOS/Linux
+bash ./copy_lib.sh
 ```
 
 ### Case B: Use the existing build files
