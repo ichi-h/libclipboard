@@ -1,12 +1,11 @@
 #!/bin/sh
 
-dylib="./target/debug/liblibclipboard.dylib"
-so="./target/debug/liblibclipboard.so"
+fileName="liblibclipboard.dylib"
 
-if [ -e $dylib ]; then
-  cp $dylib ../../libclipboard.dylib
+if [ ! -e $fileName ]; then
+  fileName="liblibclipboard.so"
 fi
 
-if [ -e $so ]; then
-  cp $so ../../libclipboard.so
-fi
+filePath=./target/debug/$fileName
+
+cp $filePath ../../$fileName
