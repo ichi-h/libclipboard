@@ -16,7 +16,7 @@ cd ./tool/libclipboard/
 cargo build
 
 # on Windows
-cp ./target/debug/libclipboard.dll ../../
+New-Item -Type SymbolicLink ../../libclipboard.dll -Value ./target/debug/libclipboard.dll
 
 # on macOS/Linux
 bash ./copy_lib.sh
