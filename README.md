@@ -16,10 +16,10 @@ cd ./tool/libclipboard/
 cargo build
 
 # on Windows
-New-Item -Type SymbolicLink ../../libclipboard.dll -Value ./target/debug/libclipboard.dll
+cp ./target/debug/libclipboard.dll ../../
 
 # on macOS/Linux
-bash ./make_symlink.sh
+bash ./copy_lib.sh
 ```
 
 ### Case B: Use the existing build files

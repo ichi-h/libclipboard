@@ -4,9 +4,9 @@ dylib="./target/debug/liblibclipboard.dylib"
 so="./target/debug/liblibclipboard.so"
 
 if [ -e $dylib ]; then
-  ln -s $dylib ../../libclipboard.dylib
+  cp $dylib ../../libclipboard.dylib
 fi
 
 if [ -e $so ]; then
-  ln -s $so ../../libclipboard.so
+  cp $so ../../libclipboard.so
 fi
