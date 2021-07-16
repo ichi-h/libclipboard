@@ -21,7 +21,7 @@ curl -sLJO https://github.com/ippee/libclipboard/releases/download/0.1.0/libclip
 
 ### Pattern B: Use your own build files
 
-This way is available in the environment which can use Rust.
+This pattern is available in the environment which can use Rust.
 
 First, add [ippee / libclipboard](https://github.com/ippee/libclipboard) repository as a submodule.
 
@@ -57,7 +57,7 @@ New-Item -Type SymbolicLink ./libclipboard.dll -Value .\tool\libclipboard\target
 bash ./make_symlink.sh
 ```
 
-### Note
+### Notes
 
 If you publish the Dart application which uses [ippee / dart_clipboard](https://github.com/ippee/dart_clipboard), put the dynamic library in the same directory with the executable.
 
