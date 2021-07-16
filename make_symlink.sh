@@ -3,12 +3,12 @@
 current=`pwd`
 
 fileName="liblibclipboard.dylib"
-
-if [ ! -e $fileName ]; then
-  fileName="liblibclipboard.so"
-fi
-
 filePath=./tool/libclipboard/target/debug/$fileName
+
+if [ ! -e $filePath ]; then
+  fileName="liblibclipboard.so"
+  filePath=./tool/libclipboard/target/debug/$fileName
+fi
 
 cd ../../
 ln -s $filePath ./$fileName
