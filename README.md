@@ -40,21 +40,20 @@ Finally, make the symbolic link to it,
 
 ```shell
 # on Windows
-cp ./target/release/libclipboard.dll ../../
+powershell ./make_symlink.ps1
 
 # on macOS/Linux
-bash ./copy_lib.sh
+bash ./make_symlink.sh
 ```
 
 or copy the library to the project directory.
 
 ```shell
 # on Windows
-cd ../../
-New-Item -Type SymbolicLink ./libclipboard.dll -Value .\tool\libclipboard\target\release\libclipboard.dll
+powershell ./copy_lib.ps1
 
 # on macOS/Linux
-bash ./make_symlink.sh
+bash ./copy_lib.sh
 ```
 
 ### Notes
