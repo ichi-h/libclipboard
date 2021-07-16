@@ -1,7 +1,7 @@
 #!/bin/sh
 
-dylib="./target/debug/liblibclipboard.dylib"
-so="./target/debug/liblibclipboard.so"
+dylib="./target/release/liblibclipboard.dylib"
+so="./target/release/liblibclipboard.so"
 
 if [ -e $dylib ]; then
   cp $dylib ../../libclipboard.dylib

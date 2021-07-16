@@ -4,8 +4,8 @@ current=`pwd`
 
 cd ../../
 
-dylib="./tool/libclipboard/target/debug/liblibclipboard.dylib"
-so="./tool/libclipboard/target/debug/liblibclipboard.so"
+dylib="./tool/libclipboard/target/release/liblibclipboard.dylib"
+so="./tool/libclipboard/target/release/liblibclipboard.so"
 
 if [ -e $dylib ]; then
   ln -s $dylib ./libclipboard.dylib

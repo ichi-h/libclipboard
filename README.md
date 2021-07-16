@@ -33,14 +33,14 @@ Next, build the dynamic library with:
 
 ```shell
 cd ./tool/libclipboard/
-cargo build
+cargo build --release
 ```
 
 Finally, make the symbolic link to it,
 
 ```shell
 # on Windows
-cp ./target/debug/libclipboard.dll ../../
+cp ./target/release/libclipboard.dll ../../
 
 # on macOS/Linux
 bash ./copy_lib.sh
@@ -51,7 +51,7 @@ or copy the library to the project directory.
 ```shell
 # on Windows
 cd ../../
-New-Item -Type SymbolicLink ./libclipboard.dll -Value .\tool\libclipboard\target\debug\libclipboard.dll
+New-Item -Type SymbolicLink ./libclipboard.dll -Value .\tool\libclipboard\target\release\libclipboard.dll
 
 # on macOS/Linux
 bash ./make_symlink.sh
