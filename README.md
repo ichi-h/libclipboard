@@ -25,3 +25,9 @@ bash ./make_symlink.sh
 ### Case B: Use the existing build files
 
 Coming soon...
+
+## License
+
+_libclipboard_ is under the MIT License.
+
+Note that [aweinstock314 / rust-clipboard](https://github.com/aweinstock314/rust-clipboard) is dual-licensed under MIT and Apache2.
