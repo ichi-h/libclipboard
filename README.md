@@ -4,7 +4,7 @@ A dynamic library to operate clipboard, for [ippee / dart_clipboard](https://git
 
 ## Installation
 
-### Case A: Use the existing build files
+### Pattern A: Use the existing build files
 
 On your Dart project directory, run the following commands.
 
@@ -19,24 +19,42 @@ curl -sLJO https://github.com/ippee/libclipboard/releases/download/0.1.0/libclip
 curl -sLJO https://github.com/ippee/libclipboard/releases/download/0.1.0/libclipboard.so
 ```
 
-### Case B: Use your own build files
+### Pattern B: Use your own build files
 
 This way is available in the environment which can use Rust.
 
-On your Dart project directory, run the following commands.
+First, add [ippee / libclipboard](https://github.com/ippee/libclipboard) repository as a submodule.
 
 ```shell
-mkdir ./tool/
 git submodule add git@github.com:ippee/libclipboard.git ./tool/libclipboard/
+```
 
+Next, build the dynamic library with:
+
+```shell
 cd ./tool/libclipboard/
 cargo build
+```
 
+Finally, make the symbolic link to it,
+
+```shell
 # on Windows
 cp ./target/debug/libclipboard.dll ../../
 
 # on macOS/Linux
 bash ./copy_lib.sh
+```
+
+or copy the library to the project directory.
+
+```shell
+# on Windows
+cd ../../
+New-Item -Type SymbolicLink ./libclipboard.dll -Value .\tool\libclipboard\target\debug\libclipboard.dll
+
+# on macOS/Linux
+bash ./make_symlink.sh
 ```
 
 ### Note
