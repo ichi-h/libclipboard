@@ -40,7 +40,7 @@ Finally, make the symbolic link to it,
 
 ```shell
 # on Windows
-powershell ./make_symlink.ps1
+./make_symlink.ps1
 
 # on macOS/Linux
 bash ./make_symlink.sh
@@ -50,7 +50,7 @@ or copy the library to the project directory.
 
 ```shell
 # on Windows
-powershell ./copy_lib.ps1
+./copy_lib.ps1
 
 # on macOS/Linux
 bash ./copy_lib.sh
