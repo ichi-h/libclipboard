@@ -1,7 +1,5 @@
 # libclipboard
 
-[![libclipboard](https://github.com/ippee/libclipboard/actions/workflows/libclipboard.yml/badge.svg)](https://github.com/ippee/libclipboard/actions/workflows/libclipboard.yml)
-
 A dynamic library to operate clipboard, for [ippee / dart_clipboard](https://github.com/ippee/dart_clipboard).
 
 ## Installation
