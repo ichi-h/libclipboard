@@ -1,10 +1,12 @@
 # libclipboard
 
+[![libclipboard](https://github.com/ippee/libclipboard/actions/workflows/libclipboard.yml/badge.svg)](https://github.com/ippee/libclipboard/actions/workflows/libclipboard.yml)
+
 A dynamic library to operate clipboard, for [ippee / dart_clipboard](https://github.com/ippee/dart_clipboard).
 
 ## Installation
 
-### Pattern A: Use the existing build files
+### A: Use the existing build files
 
 On your Dart project directory, run the following commands.
 
@@ -19,9 +21,9 @@ curl -sLJO https://github.com/ippee/libclipboard/releases/download/0.1.0/libclip
 curl -sLJO https://github.com/ippee/libclipboard/releases/download/0.1.0/libclipboard.so
 ```
 
-### Pattern B: Use your own build files
+### B: Use your own build files
 
-This pattern is available in the environment which can use Rust.
+This way is available in the environment which can use Rust.
 
 First, add [ippee / libclipboard](https://github.com/ippee/libclipboard) repository as a submodule.
 
@@ -36,7 +38,7 @@ cd ./tool/libclipboard/
 cargo build --release
 ```
 
-Finally, make the symbolic link to it,
+Finally, make the symbolic link to the built file,
 
 ```shell
 # on Windows
