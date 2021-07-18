@@ -18,6 +18,9 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v2
+      - name: Install
+        if: runner.os == 'Linux'
+        run: apt install xorg-dev
       - name: Build
         run: cargo build --verbose
       - name: Run tests
