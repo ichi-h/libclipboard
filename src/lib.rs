@@ -15,13 +15,12 @@ use std::os::raw::c_char;
 pub extern "C" fn get_contents() -> *const c_char {
   let mut ctx: ClipboardContext = ClipboardProvider::new().expect("ClipboardProvider::new failed");
 
-  match ctx.get_contents() {
-    Ok(v) => {
-      let cstring = CString::new(v).expect("CString::new failed");
-      return cstring.into_raw();
-    },
-    Err(_e) => panic!("Failed to get the clipboard contents"),
-  }
+  let cstring = match ctx.get_contents() {
+    Ok(v) => CString::new(v).expect("CString::new failed"),
+    Err(_e) => CString::new("").expect("CString::new failed"),
+  };
+
+  return cstring.into_raw();
 }
 
 #[no_mangle]
@@ -40,7 +39,7 @@ mod tests {
   use std::ffi::CString;
 
   #[test]
-fn set_get_clipboard_contents() {
+  fn set_get_clipboard_contents() {
     let contents = CString::new("All the world's a stage").expect("CString::new failed");
     let expected_ptr = contents.into_raw();
 
