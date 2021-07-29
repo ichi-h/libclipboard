@@ -4,19 +4,21 @@ A dynamic library to operate clipboard, for [ippee / dart_clipboard](https://git
 
 ## Installation
 
+Select either method A or B.
+
 ### A: Use the existing build files
 
 On your Dart project directory, run the following commands.
 
 ```shell
 # on Windows
-curl -sLJO https://github.com/ippee/libclipboard/releases/download/0.1.0/libclipboard.dll
+curl -LJO https://github.com/ippee/libclipboard/releases/download/0.2.0/libclipboard.dll
 
 # on macOS
-curl -sLJO https://github.com/ippee/libclipboard/releases/download/0.1.0/libclipboard.dylib
+curl -LJO https://github.com/ippee/libclipboard/releases/download/0.2.0/libclipboard.dylib
 
 # on Linux
-curl -sLJO https://github.com/ippee/libclipboard/releases/download/0.1.0/libclipboard.so
+curl -LJO https://github.com/ippee/libclipboard/releases/download/0.2.0/libclipboard.so
 ```
 
 ### B: Use your own build files
